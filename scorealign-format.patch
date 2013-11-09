@@ -1,0 +1,10 @@
+--- scorealign/trace.cpp.orig	2013-11-09 08:42:50.000000000 +0100
++++ scorealign/trace.cpp	2013-11-09 13:00:32.157532788 +0100
+@@ -20,6 +20,6 @@
+ #if defined(_DEBUG) && !defined(__linux__)
+     _CrtDbgReport(_CRT_WARN, NULL, NULL, NULL, msg);
+ #else
+-    printf(msg);
++    fputs(msg, stdout);
+ #endif
+ }
